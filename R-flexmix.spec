@@ -4,7 +4,7 @@
 #
 Name     : R-flexmix
 Version  : 2.3.14
-Release  : 1
+Release  : 2
 URL      : https://cran.r-project.org/src/contrib/flexmix_2.3-14.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/flexmix_2.3-14.tar.gz
 Summary  : Flexible Mixture Modeling
@@ -14,12 +14,16 @@ Requires: R-SuppDists
 Requires: R-actuar
 Requires: R-diptest
 Requires: R-ellipse
+Requires: R-glmnet
+Requires: R-lme4
 Requires: R-modeltools
 Requires: R-mvtnorm
 BuildRequires : R-SuppDists
 BuildRequires : R-actuar
 BuildRequires : R-diptest
 BuildRequires : R-ellipse
+BuildRequires : R-glmnet
+BuildRequires : R-lme4
 BuildRequires : R-modeltools
 BuildRequires : R-mvtnorm
 BuildRequires : clr-R-helpers
@@ -38,11 +42,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521205889
+export SOURCE_DATE_EPOCH=1521206892
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521205889
+export SOURCE_DATE_EPOCH=1521206892
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
