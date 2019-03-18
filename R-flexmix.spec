@@ -4,20 +4,12 @@
 #
 Name     : R-flexmix
 Version  : 2.3.15
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/flexmix_2.3-15.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/flexmix_2.3-15.tar.gz
 Summary  : Flexible Mixture Modeling
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-SuppDists
-Requires: R-actuar
-Requires: R-diptest
-Requires: R-ellipse
-Requires: R-glmnet
-Requires: R-lme4
-Requires: R-modeltools
-Requires: R-mvtnorm
 BuildRequires : R-SuppDists
 BuildRequires : R-actuar
 BuildRequires : R-diptest
@@ -43,10 +35,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550539683
+export SOURCE_DATE_EPOCH=1552874367
 
 %install
-export SOURCE_DATE_EPOCH=1550539683
+export SOURCE_DATE_EPOCH=1552874367
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -82,8 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library flexmix|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  flexmix || :
 
 
 %files
