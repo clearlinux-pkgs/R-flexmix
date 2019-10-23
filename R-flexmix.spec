@@ -4,20 +4,13 @@
 #
 Name     : R-flexmix
 Version  : 2.3.15
-Release  : 25
+Release  : 26
 URL      : https://cran.r-project.org/src/contrib/flexmix_2.3-15.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/flexmix_2.3-15.tar.gz
 Summary  : Flexible Mixture Modeling
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-SuppDists
-Requires: R-actuar
-Requires: R-diptest
-Requires: R-ellipse
-Requires: R-glmnet
-Requires: R-lme4
 Requires: R-modeltools
-Requires: R-mvtnorm
 BuildRequires : R-SuppDists
 BuildRequires : R-actuar
 BuildRequires : R-diptest
@@ -27,6 +20,7 @@ BuildRequires : R-lme4
 BuildRequires : R-modeltools
 BuildRequires : R-mvtnorm
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 models using the EM algorithm is implemented. The E-step and all
@@ -43,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569357400
+export SOURCE_DATE_EPOCH=1571830761
 
 %install
-export SOURCE_DATE_EPOCH=1569357400
+export SOURCE_DATE_EPOCH=1571830761
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
