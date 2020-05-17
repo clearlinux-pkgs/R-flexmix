@@ -4,23 +4,21 @@
 #
 Name     : R-flexmix
 Version  : 2.3.15
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/flexmix_2.3-15.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/flexmix_2.3-15.tar.gz
 Summary  : Flexible Mixture Modeling
 Group    : Development/Tools
 License  : GPL-2.0+
+Requires: R-diptest
+Requires: R-ellipse
 Requires: R-modeltools
-BuildRequires : R-SuppDists
-BuildRequires : R-actuar
+Requires: R-mvtnorm
 BuildRequires : R-diptest
 BuildRequires : R-ellipse
-BuildRequires : R-glmnet
-BuildRequires : R-lme4
 BuildRequires : R-modeltools
 BuildRequires : R-mvtnorm
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 models using the EM algorithm is implemented. The E-step and all
@@ -31,21 +29,22 @@ models using the EM algorithm is implemented. The E-step and all
 
 %prep
 %setup -q -c -n flexmix
+cd %{_builddir}/flexmix
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571830761
+export SOURCE_DATE_EPOCH=1589748368
 
 %install
-export SOURCE_DATE_EPOCH=1571830761
+export SOURCE_DATE_EPOCH=1589748368
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

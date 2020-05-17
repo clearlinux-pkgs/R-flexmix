@@ -1,9 +1,4 @@
 2.3.15
-R-SuppDists
-R-actuar
 R-diptest
 R-ellipse
-R-glmnet
-R-lme4
 R-mvtnorm
-util-linux
