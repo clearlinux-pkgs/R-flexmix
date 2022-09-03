@@ -4,7 +4,7 @@
 #
 Name     : R-flexmix
 Version  : 2.3.18
-Release  : 48
+Release  : 49
 URL      : https://cran.r-project.org/src/contrib/flexmix_2.3-18.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/flexmix_2.3-18.tar.gz
 Summary  : Flexible Mixture Modeling
